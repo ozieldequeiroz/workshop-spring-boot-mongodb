@@ -2,10 +2,12 @@ package com.ozieldequeiroz.workshopmongo.config;
 
 import java.util.Arrays;
 
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
-
+import org.springframework.data.mongodb.repository.MongoRepository;
 import com.ozieldequeiroz.workshopmongo.domain.User;
 import com.ozieldequeiroz.workshopmongo.repository.UserRepository;
 
@@ -25,8 +27,7 @@ public class Instantiation implements CommandLineRunner{
 		User alex = new User(null, "Alex Green", "alex@gmail.com");
 		User bob = new User(null, "Bob Grey", "bob@gmail.com");
 		
-		userRepository.save( Arrays.asList(maria,alex,bob));
-		//UserRepository.save(Arrays.asList(maria,alex,bob));
+		userRepository.saveAll(Arrays.asList(maria,alex,bob));
 		
 	}
 
