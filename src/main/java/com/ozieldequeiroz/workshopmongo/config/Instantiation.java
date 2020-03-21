@@ -2,12 +2,9 @@ package com.ozieldequeiroz.workshopmongo.config;
 
 import java.util.Arrays;
 
-
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.data.mongodb.repository.MongoRepository;
 import com.ozieldequeiroz.workshopmongo.domain.User;
 import com.ozieldequeiroz.workshopmongo.repository.UserRepository;
 
@@ -19,7 +16,7 @@ public class Instantiation implements CommandLineRunner{
 	private UserRepository userRepository;
 	
 	@Override
-	public void run(String... args) throws Exception {
+	public void run(String... arg0) throws Exception {
 		
 		userRepository.deleteAll();
 		
